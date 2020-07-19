@@ -1,7 +1,13 @@
+# Django
+static_collected/*
+
+# Python
 *.pyc
 
+# venv
 env/*
 
+# VS Code
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
