@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.shortcuts import redirect
 from hello.forms import LogMessageForm
 from hello.models import LogMessage
+from django.views.generic import ListView
 
 # TEST URLS
 #TODO Remove before ship
@@ -12,8 +13,15 @@ print('http://127.0.0.1:8000/hello/Kimberly')
 # END TEST URLS
 
 # Create your views here.
-def home(request):
-    return render(request, 'hello/home.html')
+# def home(request):
+#     return render(request, 'hello/home.html')
+class HomeListView(ListView):
+    """Renders the home page, with a list of all messages."""
+    model = LogMessageForm
+
+    def get_context_data(self, **kwargs):
+        context = super(HomeListView, self).get_context_data(**kwargs)
+        return context
 
 def about(request):
     return render(request, 'hello/about.html')
