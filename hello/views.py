@@ -9,8 +9,14 @@ from django.views.generic import ListView
 
 # TEST URLS
 #TODO Remove before ship
+print('http://127.0.0.1:8000/admin')
 print('http://127.0.0.1:8000/hello/Kimberly')
 # END TEST URLS
+
+# SITE ADMIN NOTES
+#TODO Remove before ship
+# admin / password / kz@outlook
+# END SITE ADMIN NOTES
 
 # Create your views here.
 # def home(request):
