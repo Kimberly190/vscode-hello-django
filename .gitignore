@@ -1,5 +1,6 @@
 # Django
 static_collected/*
+web_project/secrets.py
 
 # Python
 *.pyc
